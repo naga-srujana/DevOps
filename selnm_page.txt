@@ -1,0 +1,13 @@
+const { Builder } = require('selenium-webdriver');
+require('chromedriver');
+
+async function runTest(){
+    let driver=await new Builder().forBrowser('chrome').build();
+    try{
+        await driver.get('https://www.google.com');
+    }finally{
+        await driver.quit();
+    }
+}
+
+runTest();
