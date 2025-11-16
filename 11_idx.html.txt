@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum</title>
+</head>
+<body style="text-align:center; font-family:sans-serif;">
+  <h2>Sum Calculator</h2>
+  <input id="x" type="number"> + 
+  <input id="y" type="number">
+  <button onclick="sum()">=</button>
+  <p id="r">Result: 0</p>
+
+  <script>
+    function sum() {
+      const x = document.getElementById('x').value;
+      const y = document.getElementById('y').value;
+      const result = Number(x) + Number(y);
+      document.getElementById('r').innerText = 'Result: ' + result;
+    }
+  </script>
+</body>
+</html>
